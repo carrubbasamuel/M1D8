@@ -19,7 +19,13 @@ i{
 }
 
 
-/*navbar*/
+
+
+
+
+/*---------------------------navbar-----------------------*/
+
+
 
 .navbar{
     position: fixed;
@@ -28,6 +34,7 @@ i{
     background-color: white;
     justify-content: space-between;
     padding: 0 80px;
+    z-index: 2;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.108);
 }
 
@@ -70,12 +77,19 @@ div.flex.navbar>div.flex.user>div.user{
 }
 
 
-/*article*, left-side*/
+
+
+
+/*---------------------------Main-------------------------*/
+
 
 main>div.flex.conteiner{
     padding: 90px 0 0 80px;
     
 }
+
+
+
 
 div#left-side{
     padding:50px 70px 0 0;
@@ -83,11 +97,22 @@ div#left-side{
     flex-flow: column wrap;
 }
 
+
+
+
+
+/*--------------Article side(left-side)------------------*/
+
+
 div#right-side{
     padding: 0 80px;
     flex-flow: column wrap;
-    justify-content: space-around;
+    align-items: center;
 }
+
+
+/*-------------Chooise--------------*/
+
 
 div#left-side>div.choise{
     padding: 10px 0;
@@ -107,75 +132,45 @@ div#left-side>div.choise>span:last-child{
 }
 
 
-/*Card*/
+
+
+
+/*--------------------Style about Article------------------*/
+
+
 
 div.art-box{
     margin: 50px 0;
 }
 
-div.art-box>div{
-    width: 70%;
-}
 
-div.art>img.circle{
+div.author>img.circle{
     height: 25px;
     width: 25px;
     border-radius: 50%;
 }
 
 
-div.art>img.square{
+div.author>img.square{
     height: 25px;
     width: 25px;
     border-radius: 25%;
 
 }
 
-div.art{
+/* Author */
+
+div.author{
     align-items: center;
 }
 
-div.art>span{
+div.author>span{
     margin:0 5px;
     font-weight: bolder;
 }
 
-div.art-box>img{
-    width: 30%;
-    object-fit: cover;
-    padding: 0 20px;
-}
 
-div.art-bottom{
-    margin-top: 20px;
-    justify-content: space-between;
-}
-
-div.art-bottom>ul.art-date>li{
-    margin-left: 25px ;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.600);
-}
-div.art-bottom>ul.art-date>li:first-child{
-    list-style: none;
-    margin-left: 0;
-}
-
-div.art-bottom>ul.art-date>li::marker{
-    text-align: center !important;
-    font-size: 10px;
-    color: rgba(0, 0, 0, 0.600);
-}
-
-
-
-div.art-box>div.art-left>p{
-     color: rgba(0, 0, 0, 0.600);
-}
-
-div.art-bottom>div.flex.art-bott{
-    align-items: center;
-}
+/* Article title */
 
 
 h2{
@@ -190,26 +185,85 @@ h2:hover{
 
 
 
-/*Right Side*/
+
+
+/* Article text */
+
+div.art-box>div.art-left>p{
+    color: rgba(0, 0, 0, 0.600);
+}
+
+/*Info*/
+
+
+div.art-bottom{
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+div.art-bottom>ul.art-info>li{
+    margin-left: 25px ;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.600);
+}
+div.art-bottom>ul.art-info>li:first-child{
+    list-style: none;
+    margin-left: 0;
+}
+
+div.art-bottom>ul.art-info>li::marker{
+    text-align: center !important;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.600);
+}
+
+div.art-bottom>div.flex.art-bott{
+    align-items: center;
+}
+
+
+/*Immage Media*/
+
+div.art-box>img{
+    width: 30%;
+    position: relative;
+    object-fit: cover;
+    padding: 0 20px;
+}
+
+div.art-box>img::before{
+    content: "";
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    background-color: rgba(135, 44, 44, 0.311);
+    transform: scale(1);
+    z-index: 0;
+    transition: all .3s ease-out;
+}
+
+div.art-box>img:hover::before{
+    transform: scale(2);
+    z-index: 2;
+}
 
 
 
 
-/* Twitter collab */
+/*-------------------Right Side----------------------*/
+
+
+
+
+/* Twitter Collab, Login */
 
 div.tw-login{
     width: 400px;
-    height: 200px;
+    height: 250px;
     flex-flow: column wrap;
     padding: 10px 50px;
     align-items: center;
     border-bottom: 0.5px solid lightgray;
     justify-content: space-around;
-}
-
-div.tw-login>p{
-    text-align: center;
-    
 }
 
 
@@ -220,21 +274,10 @@ div.tw-login>div:first-child{
     font-weight: 200;
 }
 
+
 div.tw-login>div:first-child>img{
     height: 40px;
 }
-
-div#tw-button{
-    padding: 10px 30px 10px 5px;
-    border: 0.5px solid lightslategray;
-    border-radius: 25px;
-}
-
-div#tw-button{
-    text-align: center;
-
-}
-
 
 div.tw-login>div>i{
     color: rgb(8, 175, 247);
@@ -242,16 +285,93 @@ div.tw-login>div>i{
 
 
 
+
+div.tw-login>p{
+    text-align: center;
+    
+}
+
+/*Twitter login button*/
+
+
+div#tw-button{
+    position: relative;
+    padding: 10px 30px 10px 5px;
+    border: 0.5px solid lightslategray;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/*Hover Twitter Button*/
+
+
+
+
+div#tw-button:hover{
+    background-color: rgb(8, 175, 247);
+    border: 0.5px solid rgb(8, 175, 247);
+}
+
+div#tw-button:hover i{
+    color: white;
+}
+
+div#tw-button:hover span{
+    color: white;
+}
+
+
+/*Maybe Later link*/
+
 div.tw-login>a{
     color: lightslategray;
 }
 
 
 
-/* List of topic */
+/* ---------------List of topic------------------ */
 
 div.topic{
     flex-flow: column wrap;
+    padding: 20px 80px 0 0;
 }
+
+div.topic>p{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+div.topic>ul.bt-topic{
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+div.topic>ul.bt-topic>li{
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+}
+
+div.topic>ul.bt-topic>li::before{
+    content: " ";
+    position: absolute;
+    top: 0;right: 0;left: 0;bottom: 0;
+    background-color: rgba(119, 136, 153, 0.152); 
+    border-radius: 25px;
+    color: black;
+    transition: all .3s ease-in-out;
+    transform: scale(1);
+}
+
+div.topic>ul.bt-topic>li:hover::before{
+    transform: scale(1.1);
+}
+
+
+
 
 
