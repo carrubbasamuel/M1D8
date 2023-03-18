@@ -193,6 +193,10 @@ h2:hover{
 /*Right Side*/
 
 
+
+
+/* Twitter collab */
+
 div.tw-login{
     width: 400px;
     height: 200px;
@@ -240,6 +244,14 @@ div.tw-login>div>i{
 
 div.tw-login>a{
     color: lightslategray;
+}
+
+
+
+/* List of topic */
+
+div.topic{
+    flex-flow: column wrap;
 }
 
 
