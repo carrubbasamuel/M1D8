@@ -307,7 +307,7 @@ div.tw-login>div:first-child>img{
     height: 40px;
 }
 
-div.tw-login>div>i{
+div.tw-login>*>i{
     color: rgb(8, 175, 247);
 }
 
@@ -322,7 +322,8 @@ div.tw-login>p{
 /*Twitter login button*/
 
 
-div#tw-button{
+a#tw-button{
+    text-decoration: none ;
     position: relative;
     padding: 10px 30px 10px 5px;
     border: 0.5px solid lightslategray;
@@ -339,12 +340,12 @@ div#tw-button{
 
 
 
-div#tw-button:hover{
+a#tw-button:hover{
     background-color: rgb(8, 175, 247);
     border: 0.5px solid rgb(8, 175, 247);
 }
 
-div#tw-button:hover i{
+a#tw-button:hover i{
     color: white;
 }
 
