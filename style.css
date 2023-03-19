@@ -104,11 +104,6 @@ div#left-side{
 /*--------------Article side(left-side)------------------*/
 
 
-div#right-side{
-    padding: 0 80px;
-    flex-flow: column wrap;
-    align-items: center;
-}
 
 
 /*-------------Chooise--------------*/
@@ -224,33 +219,66 @@ div.art-bottom>div.flex.art-bott{
 
 /*Immage Media*/
 
-div.art-box>img{
-    width: 30%;
-    position: relative;
+div.art-box>div.art-img>img{
+    width: 250px;
+    height: auto;
     object-fit: cover;
-    padding: 0 20px;
+   
 }
 
-div.art-box>img::before{
+div.art-box>div.art-img{
+    position: relative;
+    margin: 0 20px;
+}
+
+div.art-box>div.art-img::before {
     content: "";
     position: absolute;
-    top: 0;bottom: 0;left: 0;right: 0;
-    background-color: rgba(135, 44, 44, 0.311);
-    transform: scale(1);
-    z-index: 0;
-    transition: all .3s ease-out;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
 }
 
-div.art-box>img:hover::before{
-    transform: scale(2);
-    z-index: 2;
+div.art-box>div.art-img:hover::before{
+    opacity: 1;
 }
+
+div.art-box>div.art-img>i{
+    color: rgba(255, 255, 255, 0.449);
+    font-size: 32px;
+    position: absolute;
+    top: 80px;
+    left: 100px;
+    transition: all 0.4s ease-out;
+    transform: scale(0);
+}
+
+
+
+div.art-box>div.art-img:hover i{
+    transform: scale(1);
+}
+
+
+
+
+
 
 
 
 
 /*-------------------Right Side----------------------*/
 
+
+div#right-side{
+    padding: 0 80px;
+    flex-flow: column wrap;
+    align-items: center;
+}
 
 
 
@@ -373,5 +401,29 @@ div.topic>ul.bt-topic>li:hover::before{
 
 
 
+/*-----------Follow racommanded-----------*/
 
+div.follow{
+    flex-flow:column  wrap;
+    padding-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+img.fw-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+div#right-side>p{
+    font-weight: bold;
+    padding-bottom: 10px;
+    align-items: start;
+}
+
+div.suggest-profile{
+    justify-content: space-between;
+}
 
