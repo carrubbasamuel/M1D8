@@ -140,6 +140,7 @@ div.art-box{
 
 
 div.author>img.circle{
+    object-fit: cover;
     height: 25px;
     width: 25px;
     border-radius: 50%;
@@ -147,6 +148,7 @@ div.author>img.circle{
 
 
 div.author>img.square{
+    object-fit: cover;
     height: 25px;
     width: 25px;
     border-radius: 25%;
@@ -275,7 +277,7 @@ div.art-box>div.art-img:hover i{
 
 
 div#right-side{
-    padding: 0 80px;
+    padding: 50px 80px;
     flex-flow: column wrap;
     align-items: center;
 }
@@ -349,8 +351,12 @@ a#tw-button:hover i{
     color: white;
 }
 
-div#tw-button:hover span{
+a#tw-button:hover span{
     color: white;
+}
+
+a#tw-button>span{
+    color: black;
 }
 
 
@@ -366,12 +372,13 @@ div.tw-login>a{
 
 div.topic{
     flex-flow: column wrap;
-    padding: 20px 80px 0 0;
+    padding-right: 80px;
+    width: 400px;
 }
 
 div.topic>p{
     font-weight: bold;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 div.topic>ul.bt-topic{
@@ -381,7 +388,7 @@ div.topic>ul.bt-topic{
 
 div.topic>ul.bt-topic>li{
     position: relative;
-    margin: 5px;
+    margin: 10px;
     padding: 10px;
 }
 
@@ -397,17 +404,25 @@ div.topic>ul.bt-topic>li::before{
 }
 
 div.topic>ul.bt-topic>li:hover::before{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 
 
 /*-----------Follow racommanded-----------*/
 
+
+div.follow>p{
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+
 div.follow{
     flex-flow:column  wrap;
     padding-top: 20px;
-    width: 100%;
+    width: 400px;
+    height: 250px;
     justify-content: space-between;
 }
 
@@ -415,16 +430,126 @@ img.fw-img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 
 div#right-side>p{
     font-weight: bold;
-    padding-bottom: 10px;
-    align-items: start;
+    padding: 20px 0;
+    align-self: start;
 }
 
 div.suggest-profile{
     justify-content: space-between;
+    align-items: center;
 }
 
+/*--------Username and occupation-------*/
+
+
+div.suggest-profile>div>div.name{
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    padding-left: 20px;
+}
+
+div.suggest-profile>div>div.name>span{
+    font-size: 12px;
+    color: lightslategray;
+}
+
+
+/*-----Button for follow-----*/
+
+
+button#button-fw{
+    position: relative;
+    padding: 0 15px;
+    background-color: white;
+    border-radius: 25px;
+    border: .5px solid lightslategray;
+    height: 30px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all .2s ease-in-out;
+}
+
+
+button#button-fw:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.2);
+}
+
+
+
+/* ----------------Recently saved---------------- */
+
+div.post-box{
+    width: 400px;
+    height: 250px;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+div.post-saved>div.author>:not(:first-child){
+    font-size: 14px;
+}
+
+div.post-saved>h2{
+    font-size: 18px;
+}
+
+div.post-saved>p{
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+
+div.post-saved>ul{
+    align-items: center;
+}
+
+div.post-saved>ul>li{
+    margin: 10px;
+    font-size: 12px;
+    color: lightslategray;
+}
+
+
+div.post-saved>ul>li:first-child{
+    list-style: none;
+    margin-left: 0;
+}
+
+div.post-saved>ul>i{
+    font-size: 8px;
+    margin: 0;
+    color: lightslategray;
+}
+
+
+
+div.post-box>p{
+    color: green;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+
+/*----------Extra----------*/
+
+
+div.extra{
+    width: 400px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+div.extra>span{
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 30px 0 0;
+    color: lightslategray;
+}
