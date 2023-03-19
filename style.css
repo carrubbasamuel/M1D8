@@ -10,7 +10,6 @@
 i{
     margin: 0 10px;
     font-size: 20px;
-    font-weight:lighter;
     cursor: pointer;
 }
 
@@ -84,7 +83,7 @@ div.flex.navbar>div.flex.user>div.user{
 /*---------------------------Main-------------------------*/
 
 
-main>div.flex.conteiner{
+main>div.conteiner{
     padding: 90px 0 0 80px;
     
 }
@@ -281,9 +280,6 @@ div.art-box>div.art-img:hover i{
 
 
 
-
-
-
 /*-------------------Right Side----------------------*/
 
 
@@ -358,6 +354,10 @@ a#tw-button:hover{
     border: 0.5px solid rgb(8, 175, 247);
 }
 
+a#tw-button>span{
+    color: black;
+}
+
 a#tw-button:hover i{
     color: white;
 }
@@ -366,9 +366,7 @@ a#tw-button:hover span{
     color: white;
 }
 
-a#tw-button>span{
-    color: black;
-}
+
 
 
 /*Maybe Later link*/
