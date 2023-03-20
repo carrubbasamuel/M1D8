@@ -136,6 +136,7 @@ div#left-side>div.choise>span:last-child{
 
 div.art-box{
     margin: 50px 0;
+    justify-content: space-between;
 }
 
 
@@ -443,11 +444,12 @@ img.fw-img{
 }
 
 
-div#right-side>p{
+div#right-side>*>p{
     font-weight: bold;
     padding: 20px 0;
     align-self: start;
 }
+
 
 div.suggest-profile{
     justify-content: space-between;
@@ -494,6 +496,14 @@ button#button-fw:hover{
 
 
 /* ----------------Recently saved---------------- */
+
+
+/*---------Position stiky-------*/
+div.stiky{
+    position: sticky;
+    top: 100px;
+}
+
 
 div.post-box{
     width: 400px;
