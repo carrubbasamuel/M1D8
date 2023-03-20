@@ -324,10 +324,7 @@ div.tw-login>*>i{
 
 
 
-div.tw-login>p{
-    text-align: center;
-    
-}
+
 
 /*Twitter login button*/
 
@@ -386,10 +383,6 @@ div.topic{
     width: 400px;
 }
 
-div.topic>p{
-    font-weight: bold;
-    padding-bottom: 20px;
-}
 
 div.topic>ul.bt-topic{
     flex-wrap: wrap;
@@ -422,10 +415,6 @@ div.topic>ul.bt-topic>li:hover::before{
 /*-----------Follow racommanded-----------*/
 
 
-div.follow>p{
-    font-weight: bold;
-    padding-bottom: 20px;
-}
 
 
 div.follow{
@@ -444,7 +433,7 @@ img.fw-img{
 }
 
 
-div#right-side>*>p{
+div#right-side>p{
     font-weight: bold;
     padding: 20px 0;
     align-self: start;
@@ -499,9 +488,15 @@ button#button-fw:hover{
 
 
 /*---------Position stiky-------*/
-div.stiky{
+div.sticky{
     position: sticky;
     top: 100px;
+}
+
+div.sticky>p:first-child{
+    font-weight: bold;
+    padding: 20px 0;
+    align-self: start;
 }
 
 
